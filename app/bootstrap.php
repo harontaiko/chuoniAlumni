@@ -1,3 +1,4 @@
+<?php
 //load config
 require_once "config/config.php";
 //AUTO LOAD CORE

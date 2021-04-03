@@ -55,37 +55,13 @@ class Schema extends Database
 
       //CREATE TABLE STATEMENTS
       $this->tables = [
-        $scholars_table,
-        $scholars_info_table,
-        $question_table,
-        $questionReview,
-        $answerReview,
-        $tags_table,
-        $questionVote_table,
-        $answerVote_table,
-        $commentVote_table,
-        $voterstable,
-        $answer_table,
-        $comments_table,
-        $contact_table,
-        $login_table,
+        $advice_table,
+        $advice_owner_table,
       ];
 
       $this->nw_table_names = [
-        "" . $this->DB_PREFIX . "_scholars",
-        "" . $this->DB_PREFIX . "_scholarsinfo",
-        "" . $this->DB_PREFIX . "_question",
-        "" . $this->DB_PREFIX . "_questionreview",
-        "" . $this->DB_PREFIX . "_answerreview",
-        "" . $this->DB_PREFIX . "_tags",
-        "" . $this->DB_PREFIX . "_questionvote",
-        "" . $this->DB_PREFIX . "_answervote",
-        "" . $this->DB_PREFIX . "_commentvote",
-        "" . $this->DB_PREFIX . "_voters",
-        "" . $this->DB_PREFIX . "_answer",
-        "" . $this->DB_PREFIX . "_comments",
-        "" . $this->DB_PREFIX . "_contact",
-        "" . $this->DB_PREFIX . "_login",
+        "" . $this->DB_PREFIX . "_advice",
+        "" . $this->DB_PREFIX . "_adviceowner",
       ];
 
       //default execution first
@@ -102,17 +78,9 @@ class Schema extends Database
         $this->stmt->execute();
       }
 
-      LoadTestData(
-        "ps_scholars",
-        "ps_question",
-        "ps_scholarsinfo",
-        $this->conn
-      );
     } else {
       //run null->optimizes loading
     }
 
-    //delete all non-verified users after 24 hours
-    DeleteNonVerified("ps_scholars", $this->conn, 0);
   }
 }
