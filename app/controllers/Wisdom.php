@@ -25,5 +25,23 @@ class Wisdom extends Controller
     $this->view("wisdom/chapters", $data); 
   }
 
+  public function about()
+  {
+    $data = [
+      "title" => "About - if i knew then",
+    ];
+
+    $this->view("wisdom/about", $data); 
+  }
+
+  public function contact()
+  {
+    $data = [
+      "title" => "Contact - if i knew then",
+    ];
+
+    $this->view("wisdom/contact", $data); 
+  }
+
  
 }

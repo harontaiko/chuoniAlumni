@@ -8,6 +8,15 @@ class Alumni extends Controller
       $this->alumniModel = $this->model("Alumnii");
     }
 
+    public function index()
+    {
+        $data = [
+          "title" => "if i knew then",
+        ];
+  
+        $this->view("wisdom/index", $data);   
+    }
+
     public function list()
     {
       $data = [

@@ -1,20 +1,20 @@
 <?php require(APPROOT . '/views/inc/header.php'); ?>
 
-<body class="alumnilist __alumnilist">
+<body class="contact __contact">
     <?php include_once (APPROOT . '/views/inc/navbar.php') ?>
     <section class="categories_top">
         <h3>if i knew then</h3>
         <p><?php echo ABOUT_US; ?></p>
     </section>
     <hr>
-    <section class="categories_list">
-        <h2>Contributing Alumni</h2>
-        <p class="alumni_desc">
-            All Alumni are welcome to share their thoughts and advice here
-            visit the <a href="<?php echo URLROOT; ?>/participate/start">participate</a> page to make your
-            contributions. All form of verification is highly appreciated, e.g &#40;biography and profile photo&#41;
-        </p>
-        <p><span class="alumni_title">1.</span> <i class="alumni_items"></i></p>
+    <section class="contact_us container">
+        <div class="contact_info">
+            <p>Any inquiries or questions can be addressed to:</p>
+            <address>
+                <p>Email: <span class="info_item">info@chuonialumni.co.ke</span></p>
+                <p>Phone: <span class="info_item">254 790 108762</span></p>
+            </address>
+        </div>
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>
     <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>

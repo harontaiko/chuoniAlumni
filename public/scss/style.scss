@@ -267,6 +267,61 @@ hr {
   font-weight: lighter;
 }
 
+.participate_ {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+#participate_submit {
+  display: block;
+  width: 100%;
+}
+
+label {
+  color: #08c;
+}
+
+select {
+  width: 100%;
+  height: 30px;
+}
+
+.input_wrapp {
+  width: 100%;
+  margin-bottom: 1.1rem;
+}
+
+.input_item {
+  width: 100%;
+  height: 30px;
+}
+
+#advice-val {
+  width: 100%;
+}
+
+.participate-btn {
+  background-color: #08c;
+  border: none;
+  outline: none;
+  padding: 5px 6px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about_us {
+  display: block;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.contact_us {
+  border: 1px solid #08c;
+  padding: 0.5rem;
+}
+
 @media (max-width: 600px) {
   #footer {
     display: flex;

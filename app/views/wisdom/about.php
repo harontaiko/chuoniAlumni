@@ -1,20 +1,20 @@
 <?php require(APPROOT . '/views/inc/header.php'); ?>
 
-<body class="alumnilist __alumnilist">
+<body class="about __about">
     <?php include_once (APPROOT . '/views/inc/navbar.php') ?>
     <section class="categories_top">
         <h3>if i knew then</h3>
         <p><?php echo ABOUT_US; ?></p>
     </section>
     <hr>
-    <section class="categories_list">
-        <h2>Contributing Alumni</h2>
-        <p class="alumni_desc">
-            All Alumni are welcome to share their thoughts and advice here
-            visit the <a href="<?php echo URLROOT; ?>/participate/start">participate</a> page to make your
-            contributions. All form of verification is highly appreciated, e.g &#40;biography and profile photo&#41;
+    <section class="about_us">
+        <h2>About - if i knew site</h2>
+        <p>Some things are not directly taught in school,most of the time
+            you just have to experience things and it turns out that <q><i>life is the greatest
+                    teacher</i></q>, who better to give you advice on where you are now than someone who went
+            through and actually conquered? We are focused on answering questions you cant academically
+            find answers to on things that actually matter.
         </p>
-        <p><span class="alumni_title">1.</span> <i class="alumni_items"></i></p>
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>
     <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>

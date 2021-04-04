@@ -1,10 +1,11 @@
 <?php
 
-class Participate extends Controller
+class Policy extends Controller
 {
+
     public function __construct()
     {
-        $this->participateModel = $this->model("Participatee");
+        $this->policyModel = $this->model('Policyy');
     }
 
     public function index()
@@ -16,12 +17,14 @@ class Participate extends Controller
         $this->view("wisdom/index", $data);   
     }
 
-    public function start()
+    
+    public function terms()
     {
       $data = [
-        'title' => "Alumni - Participate"
+        'title' => "if i knew then - Terms of use"
       ];
   
-      $this->view('participate/start', $data);
+      $this->view('policy/terms', $data);
     }
+
 }
