@@ -12,7 +12,7 @@
 --
 -- Database: `chuoni alumni`
 --
--- Table prefix 'ps' [c]huoni [a]lumni
+-- Table prefix 'ca' [c]huoni [a]lumni
 -----------------------------------------------------------
 */
 
@@ -32,7 +32,7 @@ class Schema extends Database
   private $table_num;
 
   //by default all prefixes are lowercase
-  private $DB_PREFIX = "ps";
+  private $DB_PREFIX = "ca";
 
   /**
    * createAll
@@ -44,7 +44,7 @@ class Schema extends Database
     $this->conn = new Database();
 
     //check table number
-    $this->table_num_query = "SHOW TABLES in principals_archive";
+    $this->table_num_query = "SHOW TABLES in chuoni_alumni";
     $this->stmt = $this->conn->prepare($this->table_num_query);
     $this->stmt->execute();
     $this->table_num_result = $this->stmt->get_result();

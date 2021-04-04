@@ -15,11 +15,11 @@ define('MAIL_PORT', '');
 //app route
 define('APPROOT', dirname(dirname(__FILE__)));
 //url root https://8c761d381b02.ngrok.io/principals-archive
-define('URLROOT', 'http://localhost/chuoniAlumni/');
+define('URLROOT', 'http://localhost/chuoniAlumni');
 //site name
 define('SITENAME', 'Chuoni Alumni');
 
-define('SITE_DESCRIPTION', 'Pricipals Archive is a catalogue of advice from alumni from universities all over Kenya', true);
+define('SITE_DESCRIPTION', 'Chuoni Alumni is a catalogue of advice from alumni from universities all over Kenya', true);
 
 define('DEFAULT_TITLE', 'if i knew then', true);
 

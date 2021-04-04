@@ -15,4 +15,15 @@ class Wisdom extends Controller
 
       $this->view("wisdom/index", $data);   
   }
+
+  public function chapters()
+  {
+    $data = [
+      "title" => "Categories - if i knew then",
+    ];
+
+    $this->view("wisdom/chapters", $data); 
+  }
+
+ 
 }

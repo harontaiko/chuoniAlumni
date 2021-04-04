@@ -48,4 +48,22 @@ chuoni = {
         "black");
     },
   },
+  __chapters: {
+    init: function _chapters() {
+      const focusLink = (document.querySelector("#chapters").style.color =
+        "black");
+    },
+  },
+  __alumnilist: {
+    init: function _chapters() {
+      const focusLink = (document.querySelector("#alumni").style.color =
+        "black");
+    },
+  },
+  __participate: {
+    init: function _chapters() {
+      const focusLink = (document.querySelector("#participate").style.color =
+        "black");
+    },
+  },
 };

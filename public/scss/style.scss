@@ -1,5 +1,5 @@
 :root {
-  --link-color: rgb(132, 255, 249) !important;
+  --link-color: #08c !important;
   --text-color: rgb(8, 8, 8) !important;
   --bold-text: black !important;
 }
@@ -39,7 +39,7 @@ body {
     padding: 0 3% 6px 3%;
     line-height: 20px;
     display: inline-block;
-    border-bottom: 1px solid rgb(73, 63, 63);
+    border-bottom: 1px solid #ccc;
     &:hover + .dropdown-items {
       display: block;
     }
@@ -93,6 +93,7 @@ body {
 }
 
 .next_bg {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +111,8 @@ body {
 }
 
 .inline-img-text {
-  position: fixed;
+  position: absolute;
+  margin-right: 14px;
   z-index: 1;
   font-weight: bolder;
   font-size: 2rem;
@@ -128,4 +130,160 @@ body {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.default_intro {
+  margin: auto;
+  text-align: center;
+  font-size: large;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+hr {
+  color: #ccc;
+  background: #ccc;
+  border-top-color: #ccc;
+}
+
+.chapter_list h2,
+.alumni_list h2 {
+  text-align: center;
+}
+
+.chapter_title,
+.alumni_title {
+  font-weight: lighter;
+  color: var(--bold-text);
+  text-align: left !important;
+}
+
+.chapter_items,
+.alumni_items {
+  color: var(--link-color);
+}
+
+.inner_chapter,
+.inner_alumni {
+  position: relative;
+  display: block;
+  left: 150px;
+}
+
+#footer {
+  position: relative;
+  margin-top: 20%;
+  font-weight: lighter;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #999;
+  margin: 5.6em auto 2.85em 0;
+  opacity: 0.7;
+  display: block;
+  text-align: center;
+}
+
+.footer_bottom ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 110px;
+}
+
+.footer_bottom ul li {
+  padding: 3px 3%;
+}
+
+.footer_bottom ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.footer_top p {
+  text-align: center;
+}
+
+.illustration_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.illustration_ img {
+  width: 50%;
+  height: auto;
+  background-position: center;
+  background-size: auto;
+}
+
+.categories_top {
+  display: block;
+  text-align: center;
+}
+
+.categories_top h3 {
+  font-weight: bold;
+}
+
+.categories_list {
+  display: block;
+  text-align: center;
+}
+
+.categories_list h2 {
+  font-size: 2.3rem;
+  margin-bottom: 3.4%;
+}
+
+.categories_list h3 {
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.categories_list a {
+  text-decoration: none;
+  color: var(--link-color);
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.alumni_desc {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+.participate_ h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: lighter;
+}
+
+@media (max-width: 600px) {
+  #footer {
+    display: flex;
+  }
+  .footer_bottom ul {
+    left: 55px;
+  }
+
+  .default_intro {
+    margin-left: 3%;
+    margin-right: 25%;
+    font-size: small;
+  }
+
+  .site_info {
+    margin-left: 0;
+    margin-right: 15%;
+    font-size: small;
+  }
 }
