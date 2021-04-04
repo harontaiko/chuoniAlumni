@@ -322,6 +322,60 @@ select {
   padding: 0.5rem;
 }
 
+.family_ {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.family_ img {
+  height: 500px;
+  width: 800px;
+}
+
+.next_chapter {
+  position: relative;
+  float: right;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  margin-top: -100px;
+}
+
+.prev_chapter {
+  position: relative;
+  float: left;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  margin-top: -100px;
+}
+
+.next_chapter a {
+  color: #08c;
+  text-decoration: none;
+  text-transform: lowercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.prev_chapter a {
+  color: #08c;
+  text-decoration: none;
+  text-transform: lowercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.advice__ {
+  margin-top: 11%;
+  margin-bottom: 8%;
+}
+
+.advice_owner {
+  color: #08c;
+}
+
 @media (max-width: 600px) {
   #footer {
     display: flex;
