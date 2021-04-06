@@ -9,7 +9,7 @@
     <hr>
     <section class="participate_">
         <h2>Participate</h2>
-        <form action="" method="POST" id="participate_submit">
+        <form action="<?php echo URLROOT; ?>/participate/start" method="POST" id="participate_submit">
             <div class="input_wrapp">
                 <label for="participate-category">Chapter Category</label>
                 <select name="participate-category">
@@ -26,26 +26,24 @@
                 </select>
             </div>
             <div class="input_wrapp">
-                <label for="fname">First Name</label>
-                <input type="text" name="fname" placeholder="Provide your first name" class="input_item" required>
+                <label for="uname">Name</label>
+                <input type="text" name="uname" placeholder="Provide your full name" class="input_item" required
+                    value="<?php echo isset($data['uname']) ? $data['uname']: '' ?>">
             </div>
-            <div class="input_wrapp">
-                <label for="lname">Last Name</label>
-                <input type="text" name="lname" placeholder="Provide your last name" class="input_item" required>
-            </div>
-            <div class="input_wrapp">
+            <div class=" input_wrapp">
                 <label for="institution">Former Institution</label>
                 <input type="text" name="institution" placeholder="Provide your former institution" class="input_item"
-                    required>
+                    required value="<?php echo isset($data['institution']) ? $data['institution']: '' ?>">
             </div>
-            <div class="input_wrapp">
+            <div class=" input_wrapp">
                 <label for="position">Current Position</label>
                 <input type="text" name="position" placeholder="Enter your current position e.g accountant"
-                    class="input_item" required>
+                    class="input_item" required value="<?php echo isset($data['position']) ? $data['position']: '' ?>">
             </div>
-            <div class="input_wrapp">
-                <label for="position">Your advice</label>
-                <textarea name="advice-" id="advice-val" cols="30" rows="10"></textarea>
+            <div class=" input_wrapp">
+                <label for="advice">Your advice</label>
+                <textarea name="advice-" id="advice-val" cols="30" rows="10"
+                    required><?php echo isset($data['advice-']) ? $data['advice-']: '' ?></textarea>
             </div>
             <input title="submit your advice" type="submit" value="Submit Your Advice" name="participate-submit"
                 class="participate-btn">

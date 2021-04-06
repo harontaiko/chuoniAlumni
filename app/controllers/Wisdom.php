@@ -5,12 +5,16 @@ class Wisdom extends Controller
   public function __construct()
   {
     $this->wisdomModel = $this->model("Wisdomm");
+    $this->alumniModel = $this->model("Alumnii");
   }
 
   public function index()
   {
+    $alumni = $this->alumniModel->getAllAlumni();
+    
       $data = [
         "title" => "if i knew then",
+        'alumni'=>$alumni
       ];
 
       $this->view("wisdom/index", $data);   
@@ -41,6 +45,23 @@ class Wisdom extends Controller
     ];
 
     $this->view("wisdom/contact", $data); 
+  }
+
+  public function postSuccess()
+  {
+    $data = [
+      "title" => "Success - if i knew then",
+    ];
+
+    $this->view("wisdom/postSuccess", $data); 
+  }
+  public function postFail()
+  {
+    $data = [
+      "title" => "Failed - if i knew then",
+    ];
+
+    $this->view("wisdom/postFail", $data); 
   }
 
   public function family_friends()

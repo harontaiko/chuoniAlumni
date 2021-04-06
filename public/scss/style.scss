@@ -12,6 +12,58 @@ body {
   font-family: "MomsTypewriterRegular", Courier, "Courier New", monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
+.alert {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.alert_fail {
+  background-color: #f44336;
+  padding: 20px;
+  text-align: center;
+}
+
+.inner_confirm {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-top: 0.5rem;
+}
+
+.input_true {
+  background-color: #36f436;
+  padding: 0.2rem 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input_false {
+  background-color: #f44336;
+  padding: 0.2rem 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.alert_success {
+  background-color: #36f436;
+  padding: 20px;
+  text-align: center;
+}
+.alert_confirm {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  padding: 20px;
+  text-align: center;
+}
+
 #chapters {
   position: relative;
   display: inline-block;
@@ -155,7 +207,8 @@ hr {
 .alumni_title {
   font-weight: lighter;
   color: var(--bold-text);
-  text-align: left !important;
+  text-align: center !important;
+  text-transform: uppercase;
 }
 
 .chapter_items,
@@ -394,5 +447,87 @@ select {
     margin-left: 0;
     margin-right: 15%;
     font-size: small;
+  }
+}
+
+table {
+  width: 750px;
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #08c;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
   }
 }

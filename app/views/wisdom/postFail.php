@@ -1,0 +1,19 @@
+<?php require(APPROOT . '/views/inc/header.php'); ?>
+
+<body class="postFail __postFail">
+    <?php include_once (APPROOT . '/views/inc/navbar.php') ?>
+    <section class="categories_top">
+        <h3>if i knew then</h3>
+        <p><?php echo ABOUT_US; ?></p>
+    </section>
+    <hr>
+    <section class="container">
+        <?php flash('post-fail') ?>
+        </p>
+    </section>
+    <?php require(APPROOT . '/views/inc/footer.php'); ?>
+    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/chuoni.min.js"></script>
+</body>
+
+</html>

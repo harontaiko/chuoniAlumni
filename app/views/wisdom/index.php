@@ -16,8 +16,10 @@
             Through out the years, unwitting freshmen join univerties in different parts of the country,
             the uncertainity ahead is usually overwhelming and many times it becomes a journey of
             balancing between unproductive relationships, getting meals and studying for exams while
-            at the same time planning for future employment opportunities, so i had to create this <q>catalogue</q>
-            of advice and information that other past-students had to pass to the younger generation
+            at the same time planning for the future, all of these is not easy, so i had to create this <q>catalogue</q>
+            of advice and information that other past-students had to pass to the younger generation. And although
+            one requires more than advice in this country, sometimes all you need is that `bit of information` to get
+            you going.
         </p>
         <hr>
     </div>
@@ -42,7 +44,11 @@
         <div class="alumni_list">
             <h2>Alumni</h2>
             <div class="inner_alumni">
-                <p><span class="alumni_title">1.</span> <i class="alumni_items"></i></p>
+                <?php while($alumni = $data['alumni']->fetch_assoc()): ?>
+                <p><span class="alumni_title">-</span> <i
+                        class="alumni_items"><?php echo isset($alumni['owner_name']) ? htmlspecialchars($alumni['owner_name']): '' ?></i>
+                </p>
+                <?php endwhile ?>
             </div>
         </div>
         <hr>

@@ -19,10 +19,14 @@ class Alumni extends Controller
 
     public function list()
     {
-      $data = [
-        'title' => "Alumni - if i knew then"
-      ];
-  
-      $this->view('alumni/list', $data);
+      $alumni = $this->alumniModel->getAllAlumni();
+
+        $data = [
+          'title' => "Alumni - if i knew then",
+          'alumni'=>$alumni
+        ];
+        
+        $this->view('alumni/list', $data);
+   
     }
 }

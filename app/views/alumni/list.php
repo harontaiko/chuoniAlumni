@@ -14,7 +14,13 @@
             visit the <a href="<?php echo URLROOT; ?>/participate/start">participate</a> page to make your
             contributions. All form of verification is highly appreciated, e.g &#40;biography and profile photo&#41;
         </p>
-        <p><span class="alumni_title">1.</span> <i class="alumni_items"></i></p>
+        <?php while($alumni = $data['alumni']->fetch_assoc()): ?>
+        <p class="alumni_title">
+            <span>-</span>
+            <i
+                class="alumni_items"><?php echo isset($alumni['owner_name']) ? htmlspecialchars($alumni['owner_name']): '' ?></i>
+        </p>
+        <?php endwhile ?>
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>
     <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>
