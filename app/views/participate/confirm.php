@@ -23,29 +23,19 @@
             </div>
         </div>
         <hr>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Position</th>
-                    <th>Former institution</th>
-                    <th>Your advice</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-column="Name">
-                        <?php echo isset($data['uname']) ? $data['uname'] : '' ?></td>
-                    <td data-column="Category">
-                        <?php echo isset($data['participate-category']) ? $data['participate-category'] : '' ?></td>
-                    <td data-column="Position"><?php echo isset($data['position']) ? $data['position'] : '' ?></td>
-                    <td data-column="Former institution">
-                        <?php echo isset($data['institution']) ? $data['institution'] : '' ?></td>
-                    <td data-column="Your advice"><?php echo isset($data['advice-']) ? $data['advice-'] : '' ?></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <p>Name: <span><?php echo isset($data['uname']) ? $data['uname'] : '' ?></span></p>
+        <p>Category:
+            <span><?php echo isset($data['participate-category']) ? $data['participate-category'] : '' ?></span>
+        </p>
+        <p>Position: <span><?php echo isset($data['position']) ? $data['position'] : '' ?></span></p>
+        <p>Institution: <span><?php echo isset($data['institution']) ? $data['institution'] : '' ?></span></p>
+        <p>Advice:
+        <div class="advice_confirm">
+            <td data-column="Your advice"><?php echo isset($data['advice-']) ? $data['advice-'] : '' ?></td>
+        </div>
+        </p>
+
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>
     <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>

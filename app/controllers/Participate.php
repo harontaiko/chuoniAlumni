@@ -151,7 +151,42 @@ class Participate extends Controller
         //data is sanitized though
         $data =   $_SESSION['USER_POST'];
 
-        $this->participateModel->saveAdvice($data);
+        $row = $this->participateModel->VerifyTbl();
+
+        if($row->num_rows  > 0)
+        {
+          //check if user has data
+          $user = $this->participateModel->VerifyUserInput($data['uname']);
+
+          if($user->num_rows > 0)
+          {
+            $time = time();
+            //check if limit is exceeded
+            $limit = $this->participateModel->checkAdviceLimit($data['uname'], date('Y-m-d', $time));
+
+            if($limit['post_count'] > 1)
+            {
+              //no more entries
+              flash('post-fail', 'you already have at least 2 entries for the day, please try again after 24 hours', 'alert_fail');
+              redirect('wisdom/postFail');
+            }
+            else {
+              redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+              //update their entries, add new entry
+              $this->participateModel->saveAdvice($data);
+            }
+          }
+          else{
+            redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+            //first time entry
+            $this->participateModel->saveAdvice($data);
+          }
+        }
+        else {
+          redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+          //first time entry
+          $this->participateModel->saveAdvice($data);
+        }
       }
     }
 }

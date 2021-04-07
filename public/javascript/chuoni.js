@@ -39,6 +39,17 @@ UTIL = {
 // kick it all off here
 $(document).ready(UTIL.loadEvents);
 
+//start caching objects
+// Make sure sw are supported
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./public/javascript/serviceWorker.js")
+      .then((reg) => console.log("Service Worker: Registered (Pages)"))
+      .catch((err) => console.log(`Service Worker: Error: ${err}`));
+  });
+}
+
 //BEGIN EXECUTION HERE BASED ON PAGE
 chuoni = {
   __home: {

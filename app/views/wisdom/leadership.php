@@ -23,11 +23,12 @@
     </section>
     <hr>
     <section class="container">
+        <?php while($row = $data['row']->fetch_assoc()): ?>
         <div class="advice__">
-            <h3 class="advice_owner">Karl</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero omnis est esse minus eligendi optio
-                nostrum vel rerum vitae earum.</p>
+            <h3 class="advice_owner"><?php echo isset($row['owner_name']) ? $row['owner_name']: '' ?></h3>
+            <p><?php echo isset($row['advice_text']) ? htmlspecialchars_decode($row['advice_text']): '' ?></p>
         </div>
+        <?php endwhile ?>
         <hr>
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>

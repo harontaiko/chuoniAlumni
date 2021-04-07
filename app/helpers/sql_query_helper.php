@@ -379,6 +379,19 @@ function verifyThisUser($table, $db, $username)
   return $stmt;
 }
 
+function verifyThisUserInfo($table, $db, $username)
+{
+  $query = 'SELECT * FROM '.$table.' WHERE owner_name=?';
+
+  $stmt = $db->prepare($query);
+
+  $stmt->bind_param('s', $username);
+
+  $stmt->execute();
+
+  return $stmt;
+}
+
 function checkLimit($username, $table, $currentdate, $db)
 {
   mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -398,6 +411,19 @@ function getAllAlumni($table, $db)
   $query = 'SELECT DISTINCT owner_name FROM '.$table.' ORDER BY advice_id ASC';
 
   $stmt = $db->prepare($query);
+
+  $stmt->execute();
+
+  return $stmt;
+}
+
+ function getThisAdvice($table, $category, $db)
+{
+  $query = 'SELECT * FROM '.$table.' WHERE advice_category=? ORDER BY advice_id ASC';
+
+  $stmt = $db->prepare($query);
+
+  $stmt->bind_param('s', $category);
 
   $stmt->execute();
 

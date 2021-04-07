@@ -61,15 +61,61 @@ class Participatee
 
         $values = array($data['participate-category'], $data['advice-'], $data['date_created'], $data['time_created'], $data['uname'], $data['user_ip']);
 
-        try {
-            Insert($fields, $placeholders, $binders, $values, 'ca_advice', $this->db);
-            flash('post-pass', 'post was successfully saved, it will be reviewed and posted if appropriate');
-            unset($_SESSION['USER_POST']);
-            redirect('wisdom/postSuccess');
-            return true;
-        } catch (Error $e) {
-            return false;
+
+        $fieldsInfo = array('owner_advice_count', 'owner_name');
+
+        $placeholdersInfo = array('?', '?');
+
+        $bindersInfo = "ss";
+
+        $valuesInfo = array(1, $data['uname']);
+        //copy vals to user info
+        $result = verifyThisUserInfo('ca_adviceowner', $this->db, $data['uname']);
+
+        $row = $result->get_result();
+
+        if($row->num_rows > 0)
+        {
+            
+            //do not copy data, increment advice count
+            while($num = $row->fetc_assoc())
+            {
+                $existingCount = $num['owner_advice_count'];
+            }
+
+            $query = 'UPDATE ca_adviceowner SET owner_advice_count=? WHERE owner_name=?';
+
+            $bindersUpdate = "ss";
+
+            $valuesUpdate = array(($existingCount + 1), $data['uname']);
+            
+            try {
+                Update($query, $bindersUpdate, $valuesUpdate, 'ca_adviceowner', $this->db); 
+                Insert($fields, $placeholders, $binders, $values, 'ca_advice', $this->db);
+                flash('post-pass', 'post was successfully saved, it will be reviewed and posted if appropriate');
+                unset($_SESSION['USER_POST']);
+                redirect('wisdom/postSuccess');
+                return true;
+            } catch (Error $e) {
+                return false;
+            }
+
+            
         }
+        else {
+            //copy data and set count to 1
+            try {
+                Insert($fieldsInfo, $placeholdersInfo, $bindersInfo, $valuesInfo, 'ca_adviceowner', $this->db);
+                Insert($fields, $placeholders, $binders, $values, 'ca_advice', $this->db);
+                flash('post-pass', 'post was successfully saved, it will be reviewed and posted if appropriate');
+                unset($_SESSION['USER_POST']);
+                redirect('wisdom/postSuccess');
+                return true;
+            } catch (Error $e) {
+                return false;
+            }
+        }
+
     }
 
 

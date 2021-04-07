@@ -12,6 +12,7 @@ CREATE TABLE ' .
  date_created varchar(64) NOT NULL,
  time_created varchar(64) NOT NULL,
  owner_name varchar(256) NULL,
+ owner_institution varchar(256) NULL,
  advice_accept varchar(256) NULL DEFAULT "0",
  owner_ip varchar(256) NULL
 )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci
