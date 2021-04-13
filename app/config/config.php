@@ -1,9 +1,11 @@
 <?php
+session_start();
 //db params
 DEFINE('DB_HOST', 'localhost');
 DEFINE('DB_USER', 'chuonialumni');
 DEFINE('DB_PASS', 'Gazaslim5?');
 DEFINE('DB_NAME', 'chuoni_alumni');
+
 
 //mail params
 define('MAIL_HOST', '');
@@ -19,18 +21,18 @@ define('URLROOT', 'http://localhost/chuoniAlumni');
 //site name
 define('SITENAME', 'Chuoni Alumni');
 
-define('SITE_DESCRIPTION', 'Chuoni Alumni is a catalogue of advice from alumni from universities all over Kenya', true);
+define('SITE_DESCRIPTION', 'Chuoni Alumni is a catalogue of advice from alumni from universities all over Kenya');
 
-define('DEFAULT_TITLE', 'if i knew then', true);
+define('DEFAULT_TITLE', 'if i knew then');
 
-define('OG_URL', 'https://www.chuonialumni.co.ke', true);
+define('OG_URL', 'https://www.chuonialumni.co.ke');
 
-define('SITE_AUTHOR', 'chuoni alumni', true);
+define('SITE_AUTHOR', 'chuoni alumni');
 
-define('SITE_TYPE', 'website', true);
+define('SITE_TYPE', 'website');
 
-define('THEME_COLOR', '#047aed', true);
+define('THEME_COLOR', '#047aed');
 
-define('PRINCIPAL_MAIL', 'info@chuonialumni.co.ke', true);
+define('PRINCIPAL_MAIL', 'info@chuonialumni.co.ke');
 
-define('ABOUT_US', 'Advice from alumni from universities all over Kenya.', true);
+define('ABOUT_US', 'Advice from alumni from universities all over Kenya.');

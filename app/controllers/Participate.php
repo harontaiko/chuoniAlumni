@@ -19,7 +19,7 @@ class Participate extends Controller
     public function start()
     {
       //check for post
-      if($_SERVER['REQUEST_METHOD'] == 'POST')
+      if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['participate-submit']))
       {
 
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -49,6 +49,8 @@ class Participate extends Controller
           date_default_timezone_get();
           $data['date_created'] = date("Y-m-d", $time);
           $data['time_created'] = date('h:i:sA O', $time);
+
+          $_SESSION['USER_ADVICE'] = $data;
           
           $row = $this->participateModel->VerifyTbl();
 
@@ -69,19 +71,20 @@ class Participate extends Controller
                 redirect('wisdom/postFail');
               }
               else {
-                redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+              
+                redirect('participate/confirm/');
                 //update their entries, add new entry
                 //$this->participateModel->saveAdvice($data);
               }
             }
             else{
-              redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+              redirect('participate/confirm/');
               //first time entry
               //$this->participateModel->saveAdvice($data);
             }
           }
           else {
-            redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+            redirect('participate/confirm/');
             //first time entry
             //$this->participateModel->saveAdvice($data);
           }
@@ -109,24 +112,29 @@ class Participate extends Controller
       $this->view('participate/start', $data);
     }
 
-    public function confirm($category, $name, $institution, $position, $advice, $ip, $date, $time)
+    public function confirm()
     {
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-      if(isset($category, $name, $institution, $position, $advice, $ip, $date, $time))
+      //input validation is done by html5
+      //data is sanitized though
+      $data = $_SESSION['USER_ADVICE'];
+
+      if(isset($data))
       {
         $data = [
           "title" => "if i knew then",
-          'participate-category' => $category,
-          'uname' => $name,
-          'institution' => $institution,
-          'position' => $position,
-          'advice-' => $advice,
-          'user_ip'=> $ip,
-          'date_created'=> $date,
-          'time_created'=> $time,
+          'participate-category' => $data['participate-category'],
+          'uname' => $data['uname'],
+          'institution' => $data['institution'],
+          'position' => $data['position'],
+          'advice-' => $data['advice-'],
+          'user_ip'=> $data['user_ip'],
+          'date_created'=> $data['date_created'],
+          'time_created'=> $data['time_created'],
         ];
 
-        $_SESSION['USER_POST'] = $data;
+        $_SESSION['USER_ADVICE'] = $data;
   
         $this->view("participate/confirm", $data); 
 
@@ -149,7 +157,7 @@ class Participate extends Controller
 
         //input validation is done by html5
         //data is sanitized though
-        $data =   $_SESSION['USER_POST'];
+        $data = $_SESSION['USER_ADVICE'];
 
         $row = $this->participateModel->VerifyTbl();
 
@@ -171,19 +179,19 @@ class Participate extends Controller
               redirect('wisdom/postFail');
             }
             else {
-              redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+              redirect('participate/confirm');
               //update their entries, add new entry
               $this->participateModel->saveAdvice($data);
             }
           }
           else{
-            redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+            redirect('participate/confirm');
             //first time entry
             $this->participateModel->saveAdvice($data);
           }
         }
         else {
-          redirect('participate/confirm/'.htmlspecialchars($data['participate-category']).'/'.htmlspecialchars($data['uname']).'/'.htmlspecialchars($data['institution']).'/'.htmlspecialchars($data['position']).'/'.htmlspecialchars($data['advice-']).'/'.htmlspecialchars($data['user_ip']).'/'.htmlspecialchars($data['date_created']).'/'.htmlspecialchars($data['time_created']).'');
+          redirect('participate/confirm');
           //first time entry
           $this->participateModel->saveAdvice($data);
         }

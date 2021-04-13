@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 //flash message
 function flash($name = '', $msg = '', $class = 'alert alert_success')

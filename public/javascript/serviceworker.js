@@ -11,12 +11,11 @@ const cacheAssets = [
   "https://cdn.pixabay.com/photo/2017/07/28/09/34/sand-2548132_960_720.jpg",
   "https://cdn.pixabay.com/photo/2015/07/27/18/32/siblings-862967_960_720.jpg",
   "https://images.pexels.com/photos/6045234/pexels-photo-6045234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  "./public/stylesheets/style.css",
-  "./public/javascript/chuoni.js",
-  "./public/images/images/sandpaper.jpg",
-  "./public/images/images/favicon.ico",
-  "./public/javascript/jquery.js",
-  "./app/views/wisdom/index.php",
+  "http://localhost/chuoniAlumni/public/stylesheets/style.css",
+  "http://localhost/chuoniAlumni/public/javascript/chuoni.js",
+  "http://localhost/chuoniAlumni/public/images/images/sandpaper.jpg",
+  "http://localhost/chuoniAlumni/public/images/images/favicon.ico",
+  "http://localhost/chuoniAlumni/public/javascript/jquery.js",
 ];
 
 // Call Install Event

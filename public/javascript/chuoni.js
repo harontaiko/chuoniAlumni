@@ -39,17 +39,6 @@ UTIL = {
 // kick it all off here
 $(document).ready(UTIL.loadEvents);
 
-//start caching objects
-// Make sure sw are supported
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("./public/javascript/serviceWorker.js")
-      .then((reg) => console.log("Service Worker: Registered (Pages)"))
-      .catch((err) => console.log(`Service Worker: Error: ${err}`));
-  });
-}
-
 //BEGIN EXECUTION HERE BASED ON PAGE
 chuoni = {
   __home: {
@@ -57,24 +46,74 @@ chuoni = {
       //main page js
       const focusLink = (document.querySelector("#intro").style.color =
         "black");
+
+      //start caching objects
+      // Make sure sw are supported
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register(
+              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+            )
+            .then((reg) => console.log("Service Worker: Registered (Pages)"))
+            .catch((err) => console.log(`Service Worker: Error: ${err}`));
+        });
+      }
     },
   },
   __chapters: {
     init: function _chapters() {
       const focusLink = (document.querySelector("#chapters").style.color =
         "black");
+
+      //start caching objects
+      // Make sure sw are supported
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register(
+              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+            )
+            .then((reg) => console.log("Service Worker: Registered (Pages)"))
+            .catch((err) => console.log(`Service Worker: Error: ${err}`));
+        });
+      }
     },
   },
   __alumnilist: {
     init: function _chapters() {
       const focusLink = (document.querySelector("#alumni").style.color =
         "black");
+      //start caching objects
+      // Make sure sw are supported
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register(
+              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+            )
+            .then((reg) => console.log("Service Worker: Registered (Pages)"))
+            .catch((err) => console.log(`Service Worker: Error: ${err}`));
+        });
+      }
     },
   },
   __participate: {
     init: function _chapters() {
       const focusLink = (document.querySelector("#participate").style.color =
         "black");
+      //start caching objects
+      // Make sure sw are supported
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register(
+              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+            )
+            .then((reg) => console.log("Service Worker: Registered (Pages)"))
+            .catch((err) => console.log(`Service Worker: Error: ${err}`));
+        });
+      }
     },
   },
 };

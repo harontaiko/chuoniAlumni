@@ -53,13 +53,13 @@ class Participatee
     public function saveAdvice($data)
     {
         
-        $fields = array('advice_category', 'advice_text', 'date_created', 'time_created', 'owner_name', 'owner_ip');
+        $fields = array('advice_category', 'advice_text', 'date_created', 'time_created', 'owner_name', 'owner_institution', 'owner_ip');
 
-        $placeholders = array('?', '?', '?', '?', '?', '?');
+        $placeholders = array('?', '?', '?', '?', '?', '?', '?');
 
-        $binders= "ssssss";
+        $binders= "sssssss";
 
-        $values = array($data['participate-category'], $data['advice-'], $data['date_created'], $data['time_created'], $data['uname'], $data['user_ip']);
+        $values = array($data['participate-category'], $data['advice-'], $data['date_created'], $data['time_created'], $data['uname'], $data['institution'], $data['user_ip']);
 
 
         $fieldsInfo = array('owner_advice_count', 'owner_name');
@@ -93,7 +93,7 @@ class Participatee
                 Update($query, $bindersUpdate, $valuesUpdate, 'ca_adviceowner', $this->db); 
                 Insert($fields, $placeholders, $binders, $values, 'ca_advice', $this->db);
                 flash('post-pass', 'post was successfully saved, it will be reviewed and posted if appropriate');
-                unset($_SESSION['USER_POST']);
+                unset($_SESSION['USER_ADVICE']);
                 redirect('wisdom/postSuccess');
                 return true;
             } catch (Error $e) {
@@ -108,7 +108,7 @@ class Participatee
                 Insert($fieldsInfo, $placeholdersInfo, $bindersInfo, $valuesInfo, 'ca_adviceowner', $this->db);
                 Insert($fields, $placeholders, $binders, $values, 'ca_advice', $this->db);
                 flash('post-pass', 'post was successfully saved, it will be reviewed and posted if appropriate');
-                unset($_SESSION['USER_POST']);
+                unset($_SESSION['USER_ADVICE']);
                 redirect('wisdom/postSuccess');
                 return true;
             } catch (Error $e) {
