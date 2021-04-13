@@ -114,6 +114,15 @@ chuoni = {
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
         });
       }
+
+      //throw confirm window b4 user reloads
+      window.onbeforeunload = function (e) {
+        return window.confirm();
+      };
+
+      $(document).on("submit", "form", function (event) {
+        window.onbeforeunload = null;
+      });
     },
   },
 };
