@@ -10,7 +10,7 @@
 
 class Core
 {
-    protected $currentController = 'wisdom';
+    protected $currentController = 'Wisdom';
     protected $currentMethod = 'index';
     protected $params = [];
 
