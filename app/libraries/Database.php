@@ -32,7 +32,7 @@ class Database
     private $table_num;
 
     //by default all prefixes are lowercase
-    private $DB_PREFIX = 'ps';
+    private $DB_PREFIX = 'ca';
 
 
     /**

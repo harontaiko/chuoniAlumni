@@ -1,9 +1,9 @@
 <?php
 session_start();
 //db params
-DEFINE('DB_HOST', 'localhost');
-DEFINE('DB_USER', 'chuonialumni');
-DEFINE('DB_PASS', 'Gazaslim5?');
+DEFINE('DB_HOST', 'us-cdbr-east-03.cleardb.com');
+DEFINE('DB_USER', 'b06e5f37a2cf9e');
+DEFINE('DB_PASS', '9d1ddbfc');
 DEFINE('DB_NAME', 'chuoni_alumni');
 
 
