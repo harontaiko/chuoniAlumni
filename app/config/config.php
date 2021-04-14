@@ -4,7 +4,7 @@ session_start();
 DEFINE('DB_HOST', 'eu-cdbr-west-01.cleardb.com');
 DEFINE('DB_USER', 'bfa6c0d1b7f80f');
 DEFINE('DB_PASS', 'da35d551');
-DEFINE('DB_NAME', 'chuoni_alumni');
+DEFINE('DB_NAME', 'heroku_53aaf4eed7f59ce');
 
 //mail params
 define('MAIL_HOST', '');
