@@ -106,17 +106,18 @@ function SelectAllLatestLimit($ORDER_VALUE_, $limit, $table, $db)
  */
 function Insert($fields, $placeholders, $binders, $values, $table, $db)
 {
+
   $field_val = implode(", ", $fields);
 
   $ph = implode(", ", $placeholders);
-
+ 
   $query =
     "INSERT INTO " . $table . " (" . $field_val . ")  VALUES(" . $ph . ")";
 
   $stmt = $db->prepare($query);
 
   $stmt->bind_param("" . $binders . "", ...$values);
-
+ 
   $stmt->execute();
 }
 

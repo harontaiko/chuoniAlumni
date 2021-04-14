@@ -78,7 +78,7 @@ class Participatee
         {
             
             //do not copy data, increment advice count
-            while($num = $row->fetc_assoc())
+            while($num = $row->fetch_assoc())
             {
                 $existingCount = $num['owner_advice_count'];
             }
@@ -90,6 +90,7 @@ class Participatee
             $valuesUpdate = array(($existingCount + 1), $data['uname']);
             
             try {
+                
                 Update($query, $bindersUpdate, $valuesUpdate, 'ca_adviceowner', $this->db); 
                 Insert($fields, $placeholders, $binders, $values, 'ca_advice', $this->db);
                 flash('post-pass', 'post was successfully saved, it will be reviewed and posted if appropriate');

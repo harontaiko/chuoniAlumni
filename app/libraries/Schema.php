@@ -44,7 +44,7 @@ class Schema extends Database
     $this->conn = new Database();
 
     //check table number
-    $this->table_num_query = "SHOW TABLES in chuoni_alumni";
+    $this->table_num_query = "SHOW TABLES in ".DB_NAME."";
     $this->stmt = $this->conn->prepare($this->table_num_query);
     $this->stmt->execute();
     $this->table_num_result = $this->stmt->get_result();

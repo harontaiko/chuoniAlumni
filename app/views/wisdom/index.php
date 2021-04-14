@@ -3,8 +3,7 @@
 <body class="home __home">
     <?php include_once (APPROOT . '/views/inc/navbar.php') ?>
     <div class="next_bg">
-        <img src="https://images.pexels.com/photos/6045234/pexels-photo-6045234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            alt="if i knew">
+        <img src="https://cdn.pixabay.com/photo/2021/04/01/20/49/trees-6143244_960_720.jpg" alt="if i knew">
         <p class="inline-img-text">If only i knew then</p>
     </div>
     <div class="container">

@@ -3,3 +3,5 @@
 ### cloudflare for DDOS
 
 ### change htps in all js
+
+### change htacces in public

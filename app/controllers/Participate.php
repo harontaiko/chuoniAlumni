@@ -179,14 +179,13 @@ class Participate extends Controller
               redirect('wisdom/postFail');
             }
             else {
-              redirect('participate/confirm');
-              //update their entries, add new entry
+              print_r($data);
               $this->participateModel->saveAdvice($data);
             }
           }
           else{
-            redirect('participate/confirm');
             //first time entry
+            print_r($data);
             $this->participateModel->saveAdvice($data);
           }
         }
