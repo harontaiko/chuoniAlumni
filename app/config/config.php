@@ -2,8 +2,8 @@
 session_start();
 //db params
 DEFINE('DB_HOST', 'us-cdbr-east-03.cleardb.com');
-DEFINE('DB_USER', 'b06e5f37a2cf9e');
-DEFINE('DB_PASS', '9d1ddbfc');
+DEFINE('DB_USER', 'b20879a49cdcac');
+DEFINE('DB_PASS', '4569735');
 DEFINE('DB_NAME', 'chuoni_alumni');
 
 
