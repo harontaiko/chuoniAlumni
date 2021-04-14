@@ -16,7 +16,7 @@ define('MAIL_PORT', '');
 //app route
 define('APPROOT', dirname(dirname(__FILE__)));
 //url root https://8c761d381b02.ngrok.io/principals-archive
-define('URLROOT', 'https://chuoni-alumni.herokuapp.com');
+define('URLROOT', 'https://chuonialumni.tk/');
 //site name
 define('SITENAME', 'Chuoni Alumni');
 

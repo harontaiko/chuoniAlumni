@@ -53,7 +53,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+              "https://chuonialumni.tk/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
@@ -72,7 +72,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+              "https://chuonialumni.tk/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
@@ -90,7 +90,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+              "https://chuonialumni.tk/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
@@ -108,7 +108,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "http://localhost/chuoniAlumni/public/javascript/serviceworker.js"
+              "https://chuonialumni.tk/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
