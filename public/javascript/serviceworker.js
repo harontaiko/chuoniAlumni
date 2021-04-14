@@ -1,16 +1,6 @@
 const cacheName = "v1";
 
 const cacheAssets = [
-  "https://cdn.pixabay.com/photo/2015/11/07/11/22/smoke-1031060_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2019/12/09/19/39/landscape-4684217_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2015/08/13/20/06/flower-887443_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2013/11/28/10/02/camera-219958_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2017/08/30/07/52/money-2696219_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2013/07/13/01/20/martin-luther-king-155551_960_720.png",
-  "https://cdn.pixabay.com/photo/2016/11/08/05/20/sunset-1807524_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2017/07/28/09/34/sand-2548132_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2015/07/27/18/32/siblings-862967_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2021/04/01/20/49/trees-6143244_960_720.jpg",
   "https://chuonialumni.tk/public/stylesheets/style.css",
   "https://chuonialumni.tk/public/javascript/chuoni.js",
   "https://chuonialumni.tk/public/images/images/sandpaper.jpg",
