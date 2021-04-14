@@ -1,0 +1,12 @@
+{
+    "name": "haron/chuoni-alumni",
+    "description": "Advice from alumni from universities all over Kenya.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "harontaiko",
+            "email": "harontaiko@gmail.com"
+        }
+    ],
+    "require": {}
+}
