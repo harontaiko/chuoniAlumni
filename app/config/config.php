@@ -1,11 +1,10 @@
 <?php
 session_start();
 //db params
-DEFINE('DB_HOST', 'us-cdbr-east-03.cleardb.com');
-DEFINE('DB_USER', 'b20879a49cdcac');
-DEFINE('DB_PASS', '4569735');
+DEFINE('DB_HOST', 'eu-cdbr-west-01.cleardb.com');
+DEFINE('DB_USER', 'bfa6c0d1b7f80f');
+DEFINE('DB_PASS', 'da35d551');
 DEFINE('DB_NAME', 'chuoni_alumni');
-
 
 //mail params
 define('MAIL_HOST', '');
