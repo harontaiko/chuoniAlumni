@@ -30,20 +30,23 @@
                 <input type="text" name="uname" placeholder="Provide your full name" class="input_item" required
                     value="<?php echo isset($data['uname']) ? $data['uname']: '' ?>">
             </div>
-            <div class=" input_wrapp">
+            <div class="input_wrapp">
                 <label for="institution">Former Institution</label>
                 <input type="text" name="institution" placeholder="Provide your former institution" class="input_item"
                     required value="<?php echo isset($data['institution']) ? $data['institution']: '' ?>">
             </div>
-            <div class=" input_wrapp">
+            <div class="input_wrapp">
                 <label for="position">Current Position</label>
                 <input type="text" name="position" placeholder="Enter your current position e.g accountant"
                     class="input_item" required value="<?php echo isset($data['position']) ? $data['position']: '' ?>">
             </div>
-            <div class=" input_wrapp">
+            <div class="input_wrapp">
                 <label for="advice">Your advice</label>
                 <textarea name="advice-" id="advice-val" cols="30" rows="10"
                     required><?php echo isset($data['advice-']) ? $data['advice-']: '' ?></textarea>
+            </div>
+            <div class="input_wrapp">
+                <div class="g-recaptcha" data-sitekey="6LdB8akaAAAAAP2Yl29mvgW3Tlptgg3ZJN-FvRrd"></div>
             </div>
             <input title="submit your advice" type="submit" value="Submit Your Advice" name="participate-submit"
                 class="participate-btn">

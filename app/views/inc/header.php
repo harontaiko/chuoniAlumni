@@ -15,7 +15,7 @@
     <meta name="robots" content="index, follow">
     <meta property="og:image" content="<?php echo URLROOT; ?>/public/images/thumbnail/">
     <meta property="og:url" content="<?php echo OG_URL ?>">
-    <meta name="twitter:site" content="@principalsarchive_254">
+    <meta name="twitter:site" content="@chuonialumni">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
     <meta name="msapplication-TileColor" content="<?php echo THEME_COLOR ?>">
@@ -23,6 +23,9 @@
     <meta name="og:name" content="Chuoni Alumni | Chuoni Alumni" />
     <meta name="theme-color" content="<?php echo THEME_COLOR ?>">
     <meta name="og:url" content="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
+    <?php if (strpos($_SERVER['REQUEST_URI'], "participate/start") !== false) :  ?>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <?php endif ?>
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/stylesheets/css/style.css" />
     <link rel="icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
     <link rel="shortcut icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />

@@ -19,8 +19,14 @@ class Participate extends Controller
     public function start()
     {
       //check for post
-      if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['participate-submit']))
+      if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['participate-submit']) && isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
       {
+
+        $secretAPIkey = '6LdB8akaAAAAANGNiqCLiQ5V_y0Nb7ySQYzqEHTy';
+
+        // reCAPTCHA response verification
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretAPIkey.'&response='.$_POST['g-recaptcha-response']);
+
 
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -36,7 +42,16 @@ class Participate extends Controller
           'user_ip'=> get_ip_address(),
           'date_created'=>'',
           'time_created'=>'',
+          'captcha-err'=>''
         ];
+
+        $response = json_decode($verifyResponse);
+        if($response->success){
+          //continue
+        } else {
+          //
+          die('invalid captcha data');
+        }
 
         if(empty($data['participate-category']) || empty($data['uname']) || empty($data['institution']) || empty($data['position']) || empty($data['advice-'])){
           die('please fill in all values in the form');
@@ -101,6 +116,7 @@ class Participate extends Controller
           'institution' => "",
           'position' => "",
           'advice-' => "",
+          'captcha-err'=>'please check the captcha box'
         ];
 
         $this->view('participate/start', $data);
