@@ -100,7 +100,7 @@ chuoni = {
   },
   __participate: {
     init: function _chapters() {
-      const focusLink = (document.querySelector("#participate").style.color =
+      const focusLink = (document.querySelector("#chapters").style.color =
         "black");
       //start caching objects
       // Make sure sw are supported

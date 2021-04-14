@@ -24,7 +24,8 @@
     <section class="container">
         <?php while($row = $data['row']->fetch_assoc()): ?>
         <div class="advice__">
-            <h3 class="advice_owner"><?php echo isset($row['owner_name']) ? $row['owner_name']: '' ?></h3>
+            <h3 class="advice_owner"><?php echo isset($row['owner_name']) ? $row['owner_name']: '' ?>~
+                <?php echo isset($row['owner_institution']) ? $row['owner_institution']: '' ?></h3>
             <p><?php echo isset($row['advice_text']) ? htmlspecialchars_decode($row['advice_text']): '' ?></p>
         </div>
         <?php endwhile ?>
