@@ -21,7 +21,7 @@
                     class="nav_item_item">Participate</a></li>
             <li class="nav_item"><a href="<?php echo URLROOT; ?>/alumni/list" id="alumni"
                     class="nav_item_item">Alumni</a></li>
-            <li class="nav_item"><a href="#!" id="donate" class="nav_item_item">Donate</a></li>
+            <li class="nav_item"><a title="coming soon" href="#!" id="donate" class="nav_item_item">Donate</a></li>
         </ul>
     </nav>
 </header>
