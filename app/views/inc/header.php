@@ -26,6 +26,8 @@
     <?php if (strpos($_SERVER['REQUEST_URI'], "participate/start") !== false) :  ?>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <?php endif ?>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/stylesheets/css/style.css" />
     <link rel="icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
     <link rel="shortcut icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
