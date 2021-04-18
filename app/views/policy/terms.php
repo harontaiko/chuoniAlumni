@@ -1754,8 +1754,10 @@ Calibri;color:#595959;mso-themecolor:text1;mso-themetint:166;">In order to resol
             <div style="color: #595959;font-size: 14px;font-family: Arial;padding-top:16px;">
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>
-    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/chuoni.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/jquery.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/chuoni.min.js"></script>
 </body>
 
 </html>

@@ -6,4 +6,4 @@
 
 ### change htacces in public
 
-### add captcha for participate
+### all static js fetched thru jsdeliver,

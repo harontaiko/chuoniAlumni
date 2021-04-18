@@ -17,8 +17,10 @@
         </p>
     </section>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>
-    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/chuoni.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/jquery.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/chuoni.min.js"></script>
 </body>
 
 </html>
