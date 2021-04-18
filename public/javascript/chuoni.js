@@ -53,7 +53,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "https://chuonialumni.tk/public/javascript/serviceworker.js"
+              "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
@@ -72,7 +72,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "https://chuonialumni.tk/public/javascript/serviceworker.js"
+              "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
@@ -90,7 +90,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "https://chuonialumni.tk/public/javascript/serviceworker.js"
+              "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));
@@ -100,7 +100,7 @@ chuoni = {
   },
   __participate: {
     init: function _chapters() {
-      const focusLink = (document.querySelector("#chapters").style.color =
+      const focusLink = (document.querySelector("#participate").style.color =
         "black");
       //start caching objects
       // Make sure sw are supported
@@ -108,7 +108,7 @@ chuoni = {
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register(
-              "https://chuonialumni.tk/public/javascript/serviceworker.js"
+              "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/serviceworker.js"
             )
             .then((reg) => console.log("Service Worker: Registered (Pages)"))
             .catch((err) => console.log(`Service Worker: Error: ${err}`));

@@ -1,11 +1,11 @@
 const cacheName = "v1";
 
 const cacheAssets = [
-  "https://chuonialumni.tk/public/stylesheets/style.css",
-  "https://chuonialumni.tk/public/javascript/chuoni.js",
-  "https://chuonialumni.tk/public/images/images/sandpaper.jpg",
-  "https://chuonialumni.tk/public/images/images/favicon.ico",
-  "https://chuonialumni.tk/public/javascript/jquery.js",
+  "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/stylesheets/css/style.css",
+  "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/chuoni.min.js",
+  "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/images/images/sandpaper.jpg",
+  "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/images/icons/favicon.ico",
+  "https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/javascript/jquery.js",
 ];
 
 // Call Install Event

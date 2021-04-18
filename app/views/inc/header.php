@@ -14,7 +14,6 @@
     <meta name="creator" content="<?php echo SITE_AUTHOR; ?>" />
     <meta name="og:type" content="<?php echo SITE_TYPE; ?>" />
     <meta name="robots" content="index, follow">
-    <meta property="og:image" content="<?php echo URLROOT; ?>/public/images/thumbnail/">
     <meta property="og:url" content="<?php echo OG_URL ?>">
     <meta name="twitter:site" content="@chuonialumni">
     <meta name="twitter:card" content="summary_large_image">
@@ -29,8 +28,12 @@
     <?php endif ?>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/stylesheets/css/style.css" />
-    <link rel="icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
-    <link rel="shortcut icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/stylesheets/css/style.css" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/images/icons/favicon.ico"
+        type="image/ico" />
+    <link rel="shortcut icon"
+        href="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/images/icons/favicon.ico"
+        type="image/ico" />
     <title> <?php echo $data['title']; ?> </title>
 </head>
