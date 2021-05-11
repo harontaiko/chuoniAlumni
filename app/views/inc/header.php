@@ -35,5 +35,14 @@
     <link rel="shortcut icon"
         href="https://cdn.jsdelivr.net/gh/harontaiko/chuoniAlumni@master/public/images/icons/favicon.ico"
         type="image/ico" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EP3HK4EV8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EP3HK4EV8W');
+</script>
     <title> <?php echo $data['title']; ?> </title>
 </head>
