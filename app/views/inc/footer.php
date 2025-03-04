@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="container">
         <div class="footer_top">
-            <p>Copyright &copy; 2019 Ross Ulbricht</p>
+            <p>Copyright &copy; 2019 Haron</p>
         </div>
         <div class="footer_bottom">
             <ul>

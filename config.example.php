@@ -1,10 +1,10 @@
 <?php
 session_start();
 //db params
-DEFINE('DB_HOST', 'eu-cdbr-west-01.cleardb.com');
-DEFINE('DB_USER', 'bfa6c0d1b7f80f');
-DEFINE('DB_PASS', 'da35d551');
-DEFINE('DB_NAME', 'heroku_53aaf4eed7f59ce');
+DEFINE('DB_HOST', 'localhost');
+DEFINE('DB_USER', 'root');
+DEFINE('DB_PASS', '');
+DEFINE('DB_NAME', 'alumnike');
 
 //mail params
 define('MAIL_HOST', '');
@@ -16,7 +16,7 @@ define('MAIL_PORT', '');
 //app route
 define('APPROOT', dirname(dirname(__FILE__)));
 //url root https://8c761d381b02.ngrok.io/principals-archive
-define('URLROOT', 'https://chuonialumni.tk');
+define('URLROOT', 'http://alumnike');
 //site name
 define('SITENAME', 'Chuoni Alumni');
 
