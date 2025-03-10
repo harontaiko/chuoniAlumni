@@ -40,7 +40,16 @@
         </div>
     </div>
     <div class="container">
-      
+        <div class="alumni_list">
+            <h2>Alumni</h2>
+            <div class="inner_alumni">
+                <?php while($alumni = $data['alumni']->fetch_assoc()): ?>
+                <p><span class="alumni_title">-</span> <i
+                        class="alumni_items"><?php echo isset($alumni['owner_name']) ? htmlspecialchars($alumni['owner_name']): '' ?></i>
+                </p>
+                <?php endwhile ?>
+            </div>
+        </div>
         <hr>
     </div>
     <?php require(APPROOT . '/views/inc/footer.php'); ?>

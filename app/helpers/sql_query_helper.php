@@ -409,7 +409,7 @@ function checkLimit($username, $table, $currentdate, $db)
 
 function getAllAlumni($table, $db)
 {
-  $query = 'SELECT DISTINCT owner_name FROM '.$table.' ORDER BY advice_id ASC';
+  $query = 'SELECT DISTINCT owner_name, advice_id FROM '.$table.' ORDER BY advice_id ASC';
 
   $stmt = $db->prepare($query);
 

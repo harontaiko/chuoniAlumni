@@ -13,7 +13,7 @@
     <meta name="creator" content="<?php echo SITE_AUTHOR; ?>" />
     <meta name="og:type" content="<?php echo SITE_TYPE; ?>" />
     <meta name="robots" content="index, follow">
-    <meta property="og:image" content="<?php echo URLROOT; ?>/public/images/thumbnail/">
+    <meta property="og:image" content="<?php echo URLROOT; ?>/images/thumbnail/">
     <meta property="og:url" content="<?php echo OG_URL ?>">
     <meta name="twitter:site" content="@chuoniAlumni">
     <meta name="twitter:card" content="summary_large_image">
@@ -23,9 +23,9 @@
     <meta name="og:name" content="Chuoni Alumni | Chuoni Alumni" />
     <meta name="theme-color" content="<?php echo THEME_COLOR ?>">
     <meta name="og:url" content="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/stylesheets/css/style.css" />
-    <link rel="icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
-    <link rel="shortcut icon" href="<?php echo URLROOT; ?>/public/images/icons/favicon.ico" type="image/ico" />
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/stylesheets/css/style.css" />
+    <link rel="icon" href="<?php echo URLROOT; ?>/images/icons/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="<?php echo URLROOT; ?>/images/icons/favicon.ico" type="image/ico" />
     <title>if i knew then - Page Not Found </title>
 </head>
 <body class="notFound __notFound">
@@ -65,7 +65,7 @@
 </div>
     
 <?php require(APPROOT . '/views/inc/footer.php'); ?>
-    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo URLROOT; ?>/public/javascript/chuoni.min.js"></script>
+    <script type="text/javascript" src="<?php echo URLROOT; ?>/javascript/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo URLROOT; ?>/javascript/chuoni.min.js"></script>
 </body>
 </html>
